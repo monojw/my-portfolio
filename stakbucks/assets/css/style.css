@@ -19,7 +19,7 @@ body {
   height: 120px;
 }
 .gnb {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -388,7 +388,7 @@ body {
   display: block;
 }
 
-.bg-l .notice-inner .notice-inner-l dd {
+.bg-l .notice-inner .notice-inner-l .notice-rolling {
   position: absolute;
   left: 65px;
   top: 9px;
@@ -398,15 +398,18 @@ body {
   overflow: hidden;
 }
 
-.bg-l .notice-inner .notice-inner-l dd ul {
+.bg-l .notice-inner .notice-inner-l .notice-rolling ul {
   font-size: 14px;
   color: #fff;
 }
 
-.bg-l .notice-inner .notice-inner-l dd ul li {
+.bg-l .notice-inner .notice-inner-l .notice-rolling ul li {
   width: 55%;
   height: 24px;
   line-height: 24px;
+
+  /*  */
+  margin-top: 5px;
 }
 
 .bg-l .notice-inner .notice-inner-r {
