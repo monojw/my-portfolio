@@ -1,0 +1,759 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'HyundaiKRMedium', 'DM Sans', sans-serif;
+}
+
+.container {
+  position: relative;
+  width: 1120px;
+  margin: 0 auto;
+}
+
+.category {
+  display: block;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 1.5px;
+  font-weight: 300;
+  color: #002c5f;
+}
+
+.btn {
+  display: inline-block;
+  min-width: 140px;
+  padding: 0 30px;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  background: #777673;
+}
+
+/* HEADER */
+.header {
+  background-color: #f5f3f2;
+  color: #666666;
+}
+
+.header.over {
+  border: 2px solid #e4dcd3;
+  transition: all 0.3s;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  transition-delay: 0s;
+}
+
+.header .header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  float: left;
+  width: 155px;
+  height: 23px;
+}
+
+.header .logo img {
+  display: block;
+  width: 100%;
+}
+
+.header .gnb {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  line-height: 70px;
+  width: 589px;
+  margin-left: 93px;
+  margin-right: 55px;
+}
+
+.header .gnb li {
+  padding: 0 15px;
+}
+
+.header .gnb li:nth-child(4) a::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: -1px 0 0 8px;
+  background-image: url(https://www.hyundai.com/etc/designs/hyundai/ww/en/images/common/ico_link.png);
+  vertical-align: middle;
+}
+
+.header .gnb li:hover a {
+  color: #002c5f;
+}
+
+.header .gnb-right {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 227px;
+  height: 50px;
+}
+
+.header .gnb-right .item {
+  position: relative;
+  margin-left: 19px;
+}
+
+.header .gnb-right .item button,
+.header .gnb-right .item a {
+  display: inline-block;
+  vertical-align: middle;
+  width: 17px;
+  height: 17px;
+}
+
+.header .gnb-right .item .world-wide {
+  background: url(https://www.hyundai.com/etc/designs/hyundai/ww/en/images/common/btn_topmenu_language.png)
+    no-repeat;
+  background-size: cover;
+}
+
+.header .gnb-right .item .channel {
+  width: 20px;
+  background: url(https://www.hyundai.com/etc/designs/hyundai/ww/en/images/common/btn_topmenu_Channelh.png)
+    no-repeat;
+  background-size: cover;
+}
+
+.header .gnb-right .item .search {
+  background: url(https://www.hyundai.com/etc/designs/hyundai/ww/en/images/common/btn_topmenu_search.png)
+    no-repeat;
+  background-size: cover;
+}
+
+.header .gnb-right .item .language {
+  width: 100%;
+  height: 100%;
+  font-family: 'HyundaiKRMedium', 'DM Sans', sans-serif;
+  font-size: 17px;
+  line-height: 28px;
+  color: #666666;
+}
+
+.header .gnb-right .item .language::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  content: '';
+  top: 14px;
+  right: -10px;
+  width: 10px;
+  height: 10px;
+  border-width: 2px;
+  border-top: 3px solid #666;
+  border-right: 3px solid #666;
+  transition: 0.3s ease;
+  transform: translate(0, -50%) rotate(135deg) scale(0.5);
+}
+
+/* HEADER HIDDEN */
+.header-hidden {
+  position: absolute;
+  z-index: 100000;
+  width: 100%;
+  height: 66px;
+  background-color: #f5f3f2;
+  color: #666666;
+  visibility: hidden;
+  border-bottom: 2px solid #e4dcd3;
+}
+.header-hidden.show {
+  visibility: visible;
+}
+
+.header-hidden .header-hidden-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  padding-left: 147px;
+  padding-right: 221px;
+}
+
+.header-hidden .header-hidden-inner li {
+  padding-top: 24px;
+  padding-bottom: 26px;
+  font-weight: 300;
+}
+
+.header-hidden .header-hidden-inner li:hover a {
+  color: #002c5f;
+}
+
+.header-hidden .header-hidden-inner li a::after {
+  color: #002c5f;
+}
+
+.header-hidden .header-hidden-inner li:nth-child(5) a::after,
+.header-hidden .header-hidden-inner li:nth-child(6) a::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: -1px 0 0 8px;
+  background-image: url(https://www.hyundai.com/etc/designs/hyundai/ww/en/images/common/ico_link.png);
+  vertical-align: middle;
+}
+
+.header-hidden .header-hidden-inner li a {
+  padding-top: 24px;
+  padding-bottom: 26px;
+}
+
+.close {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  top: 24px;
+  right: 0;
+}
+
+.close:hover {
+  transform: rotate(180deg);
+  transition: 0.4s;
+}
+
+.close::before,
+.close::after {
+  display: block;
+  position: absolute;
+  top: 50%;
+  content: '';
+  right: -3px;
+  width: 44px;
+  height: 3px;
+  background-color: #666;
+}
+.close::before {
+  transform: translate(25%, -50%) rotate(45deg) scale(0.5);
+}
+.close::after {
+  transform: translate(25%, -50%) rotate(-45deg) scale(0.5);
+}
+
+/* TOPIC */
+.topic {
+  font-family: 'HyundaiKRRegular', 'DM Sans', sans-serif;
+  font-size: 14px;
+  color: #7e7e7e;
+}
+
+.topic ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 17px;
+}
+
+.topic ul li {
+  position: relative;
+}
+
+.topic ul li::after {
+  position: absolute;
+  right: 0;
+  top: 42px;
+  height: 9px;
+  width: 1px;
+  background-color: #d3d3d3;
+  content: '';
+}
+
+.topic ul li a {
+  display: inline-block;
+  padding-left: 26px;
+  padding-top: 41px;
+  padding-right: 25px;
+}
+
+.topic li a span {
+  cursor: pointer;
+}
+
+.topic li a span:hover {
+  color: #00aad2;
+}
+
+/* MAIN-HERO */
+.main-hero {
+  padding-top: 75px;
+  padding-bottom: 75px;
+  margin-bottom: -60px;
+}
+
+.main-hero .cols-wraps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.main-hero .cols-wraps .col-main {
+  width: 736px;
+  margin-bottom: 50px;
+}
+
+.main-hero .cols-wraps .col-title {
+  margin-bottom: 10px;
+}
+
+.main-hero .cols-wraps .col-title p {
+  font-size: 44px;
+  font-weight: 300;
+  line-height: 52.8px;
+}
+
+.main-hero .cols-wraps .col-sub {
+  width: 352px;
+  margin-bottom: 50px;
+}
+
+.main-hero .cols-wraps .col-sub .img-area {
+  position: relative;
+}
+
+.main-hero .cols-wraps .col-sub .img-area .img-tit {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  padding: 14px 11px 10px 13px;
+  font-size: 24px;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.main-hero .cols-wraps .col-sub .img-area .img-tit span {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1.2px;
+}
+
+.main-hero .cols-wraps .col-sub .img-area .img-tit p {
+  font-size: 24px;
+  line-height: 28px;
+}
+
+/* MAIN */
+.main {
+  padding: 25px 0 175px;
+}
+
+.main .cols-wraps {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+}
+
+/* 
+더이상 사용하지 않는다.
+.cols-wraps .col-5 {
+  width: 40%;
+}
+
+.cols-wraps .col-4 {
+  width: 31.42857142857%;
+}
+
+.cols-wraps .col-3 {
+  width: 22.85714285714%;
+}
+
+.cols-wraps .col-5,
+.cols-wraps .col-4,
+.cols-wraps .col-3 {
+  margin-bottom: 50px;
+} 
+*/
+
+.cols-wraps .col {
+  margin-bottom: 50px;
+}
+
+.main .cols-wraps .img-area {
+  height: 400px;
+}
+
+.main .cols-wraps .img-area img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.main .cols-wraps .col-title {
+  margin-top: 15px;
+}
+
+.main .cols-wraps .col-title .category {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 1.2px;
+  margin-bottom: 6px;
+}
+
+.main .cols-wraps .col-title span.title {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* MAIN-LARGE */
+.main-large {
+  background-color: #002c5f;
+  padding: 150px 0;
+}
+
+.main-large .row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-large .row .img-area img {
+  display: block;
+  width: auto;
+  height: auto;
+}
+
+.main-large .row .txt-area {
+  width: 352px;
+  margin-left: 32px;
+  color: #fff;
+}
+
+.main-large .row .txt-area h2 {
+  font-size: 40px;
+  line-height: 52px;
+  margin-bottom: 10px;
+}
+
+.main-large .row .txt-area p {
+  font-size: 16px;
+  line-height: 28px;
+}
+
+/* MAIN-SOCIAL */
+.main-social {
+  padding-top: 70px;
+  padding-bottom: 100px;
+  background-color: #f5f3f2;
+}
+
+.main-social .col-title p {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 52px;
+  margin-bottom: 20px;
+}
+
+.social-list .sns-area {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 -32px -32px;
+}
+
+.social-list .sns-area .sns-col {
+  width: 352px;
+  height: 352px;
+  margin-left: 32px;
+  margin-bottom: 32px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.social-list .sns-area .sns-col:nth-child(1) {
+  background-image: url(../img/noimage.jpg);
+  /*  background-image: url(https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/social/worldwide-main-instagram-01-8iihs-220315.jpg); */
+}
+
+.social-list .sns-area .sns-col:nth-child(2) {
+  background-image: url(../img/noimage.jpg);
+  /*  background-image: url(https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/social/worldwide-main-instagram-02-womens-day-220315.jpg); */
+}
+
+.social-list .sns-area .sns-col:nth-child(3) {
+  background-image: url(../img/noimage.jpg);
+  /*   background-image: url(https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/social/worldwide-main-instagram-03-ioniq5-220315.jpg); */
+}
+
+.social-list .sns-area .sns-col:nth-child(4) {
+  background-image: url(../img/noimage.jpg);
+  /*   background-image: url(https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/social/worldwide-main-instagram-04-asmr-220315.jpg); */
+}
+
+.social-list .sns-area .sns-col:nth-child(5) {
+  background-image: url(../img/noimage.jpg);
+  /*   background-image: url(https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/social/worldwide-main-instagram-05-asmr-220315.jpg); */
+}
+
+.social-list .sns-area .sns-col:nth-child(6) {
+  background-image: url(../img/noimage.jpg);
+  /*   background-image: url(https://www.hyundai.com/content/dam/hyundai/ww/en/images/main/social/worldwide-main-instagram-06-asmr-220315.jpg); */
+}
+
+.social-list .sns-area .sns-col a {
+  display: block;
+  padding: 28px;
+  height: 100%;
+}
+
+.social-list .sns-area .sns-col .sns-txt {
+  font-family: 'HyundaiKRRegular', 'DM Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 33px;
+  box-sizing: border-box;
+  background-color: #002c5f;
+  font-size: 18px;
+  line-height: 28px;
+  color: #f6f3f2;
+  word-break: keep-all;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.social-list .sns-area .sns-col:hover .sns-txt {
+  opacity: 1;
+}
+
+.social-list .sns-area .sns-col .sns-txt .icon-instagram {
+  width: 25px;
+  height: 25px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+  background-image: url(https://www.hyundai.com/etc/designs/hyundai/ww/ko/images/common/instagram.png);
+}
+
+/* FOOTER */
+.footer {
+  font-family: 'HyundaiKRRegular', 'DM Sans', sans-serif;
+  padding-top: 74px;
+  padding-bottom: 82px;
+  background: #000;
+  color: #cfc8c2;
+}
+
+.footer .logo {
+  line-height: 28px;
+  margin-bottom: 75px;
+}
+
+.footer-menu .dep-wrap {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-menu .dep-wrap div {
+  font-family: 'HyundaiKRMedium', 'DM Sans', sans-serif;
+  font-size: 18.72px;
+  letter-spacing: 0.192px;
+  line-height: 1;
+  color: #fff;
+}
+
+.footer-menu .dep-wrap li {
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 0.192px;
+  margin-top: 6px;
+}
+
+.footer-menu .dep-wrap li:hover {
+  color: #fff;
+}
+
+.footer-menu .dep-wrap .dep-tit {
+  margin-bottom: 18px;
+}
+
+.footer-menu .dep-wrap a,
+.footer-menu .dep-wrap dt {
+  font-size: 14px;
+  letter-spacing: 0.192px;
+  line-height: 28px;
+}
+
+.footer-menu .dep-wrap .dep-link a::after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: -1px 0 0 8px;
+  background-image: url(https://www.hyundai.com/etc/designs/hyundai/ww/en/images/common/ico_link.png);
+  vertical-align: middle;
+}
+
+.footer-menu .social .row {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.footer-menu .social .titLink {
+  font-family: 'HyundaiKRRegular', 'DM Sans', sans-serif;
+  font-size: 14px;
+  margin-bottom: 2px;
+  color: #cfc8c2;
+}
+
+.footer-menu .social .boxLink {
+  display: flex;
+  padding-bottom: 10px;
+}
+
+.footer-menu .social .boxLink dd {
+  margin-left: 17px;
+}
+.footer-menu .social .boxLink dd:first-child {
+  margin-left: 0;
+}
+
+.footer-menu .social .boxLink a {
+  display: inline-block;
+  width: 21px;
+  height: 21px;
+  background-size: 21px 21px;
+  filter: opacity(0.5) drop-shadow(0 0 0 #cfc8c2);
+}
+
+.footer-menu .social .boxLink .instagram {
+  background-image: url(https://www.hyundai.com/content/dam/hyundai/ww/en/images/common/static/instagram.png);
+}
+
+.footer-menu .social .boxLink .twitter {
+  background-image: url(https://www.hyundai.com/content/dam/hyundai/ww/en/images/common/static/twitter.png);
+}
+
+.footer-menu .social .boxLink .youtube {
+  background-image: url(https://www.hyundai.com/content/dam/hyundai/ww/en/images/common/static/youtube.png);
+}
+
+.footer-menu .social .boxLink .facebook {
+  background-image: url(https://www.hyundai.com/content/dam/hyundai/ww/en/images/common/static/facebook.png);
+}
+
+.footer .copyright {
+  margin-top: 75px;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: 0.192px;
+}
+
+/* SEARCH-HIDDEN */
+.search-hidden {
+  font-family: 'HyundaiKRRegular', 'DM Sans', sans-serif;
+  background-color: #f5f3f2;
+  position: absolute;
+  z-index: 100000;
+  width: 100%;
+  height: 231px;
+  visibility: hidden;
+}
+
+.search-hidden .search-area {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-hidden .search-area .search-input {
+  width: 572px;
+  position: relative;
+}
+
+.search-hidden .search-area .search-input .inputText {
+  width: 100%;
+  height: 50px;
+  padding-left: 20px;
+  line-height: 50px;
+  font-size: 20px;
+  border: none;
+}
+
+.search-hidden .search-area .search-input .btnSearch {
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55px;
+  height: 50px;
+  background: url(https://www.hyundai.com/etc/designs/hyundai/ww/en/images/common/btn_search.png)
+    no-repeat center center;
+  text-align: center;
+}
+
+.search-hidden .gnb-topic {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 552px;
+  padding-left: 20px;
+  margin: 29px auto 0;
+}
+
+.search-hidden .topic-title {
+  font-size: 20px;
+  line-height: 32px;
+}
+
+.search-hidden .topic-list {
+  font-size: 17px;
+  color: #666666;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-hidden .topic-list li {
+  margin-right: 25px;
+}
+
+.search-hidden .gnb-close {
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+}
+
+.search-hidden .gnb-close {
+  content: '';
+  background-color: #666;
+}
+
+.search-hidden .close {
+  position: absolute;
+  top: 20px;
+  right: 0;
+}
+
+.search-hidden.show {
+  visibility: visible;
+}
