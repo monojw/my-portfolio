@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 64px 16px;
+}
+
+.gray-filter {
+  filter: grayscale(50%);
+}
+
+/* Nav */
+.nav {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 10000;
+  width: 100%;
+}
+.nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  background-color: #fff;
+  opacity: 0.75;
+}
+
+.nav ul li {
+  padding: 8px 16px;
+  width: 25%;
+  text-align: center;
+  cursor: pointer;
+}
+
+.nav ul li:hover {
+  background: #ccc;
+  opacity: 0.75;
+}
+
+.nav ul li:last-child:hover {
+  background: #000;
+  opacity: 1;
+}
+
+.nav ul li:last-child:hover a {
+  color: #fff;
+}
+
+.nav ul li a {
+  font-size: 15px;
+  line-height: 22.5px;
+}
+
+/* Header */
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://www.w3schools.com/w3images/wedding_couple.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  text-align: center;
+  color: #fff;
+}
+
+.header h1 {
+  font-size: 64px;
+  letter-spacing: 4px;
+  line-height: 96px;
+}
+
+.header h2,
+.header b {
+  font-size: 30px;
+  letter-spacing: 4px;
+  line-height: 45px;
+}
+
+.header b {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.header h1,
+.header h2,
+.header b {
+  margin-top: 10px;
+}
+
+/* About */
+.about {
+  background-color: #ffdddd;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-content b {
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 700;
+  color: #757575;
+  margin: 10px 0;
+}
+
+.about-content img {
+  margin: 32px 0;
+  width: 100%;
+}
+
+.about-content p {
+  font-size: 15px;
+  line-height: 30px;
+  font-style: italic;
+  margin: 15px 0;
+}
+
+.about-content button {
+  display: block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  margin: 15px 0;
+  background-color: #000;
+  color: #fff;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+}
+
+/* Invite */
+.invite {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://www.w3schools.com/w3images/flowers.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+
+  text-align: center;
+  color: #fff;
+}
+
+.invite h1 {
+  font-size: 64px;
+  line-height: 96px;
+  margin: 10px 0;
+}
+
+.invite h2 {
+  font-size: 30px;
+  line-height: 45px;
+  margin: 10px 0;
+}
+
+/* Detail */
+.detail {
+  background-color: #ffdddd;
+}
+
+.detail-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.detail-content h1 {
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 700;
+  color: #757575;
+  margin: 10px 0;
+}
+
+.detail-content img {
+  margin: 64px 0;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+.detail-info h2 {
+  font-size: 30px;
+  line-height: 45px;
+  margin: 10px 0;
+}
+
+.detail-info p {
+  font-size: 15px;
+  line-height: 30px;
+  margin: 15px 0;
+}
+
+/* RSVP */
+.rsvp {
+  background-color: #ffdddd;
+}
+
+.rsvp-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.rsvp-content h1 {
+  font-size: 36px;
+  letter-spacing: 4px;
+  line-height: 54px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.rsvp-content p {
+  font-size: 18px;
+  letter-spacing: 4px;
+  line-height: 36px;
+  text-align: center;
+  margin: 18px 0;
+}
+
+.rsvp-content button {
+  display: block;
+  padding: 8px 60px;
+  border: none;
+  border-radius: 4px;
+  margin: 24px 0;
+  background-color: #f44336;
+  color: #fff;
+  font-size: 24px;
+  line-height: 48px;
+  opacity: 0.6;
+}
+
+/* Footer */
+.footer {
+  padding: 16px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer p {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.footer p a {
+  color: #fff;
+  text-decoration-line: underline;
+}
