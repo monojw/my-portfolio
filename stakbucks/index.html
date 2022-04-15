@@ -5,9 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <!-- bxSlider -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./assets/js/bxslider.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/reset.css" />
     <link rel="stylesheet" href="assets/css/fonts.css" />
+    <link rel="stylesheet" href="assets/css/animation.css" />
+    <link rel="stylesheet" href="assets/css/bxslider.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
@@ -497,9 +504,9 @@
                   </div>
                 </li>
 
-                <!-- what's news -->
+                <!-- what's new -->
                 <li class="gnb_nav06">
-                  <h2><a href="#">WHAT'S NEWS</a></h2>
+                  <h2><a href="#">WHAT'S NEW</a></h2>
                   <div class="gnb_sub_wrap">
                     <div class="gnb_sub">
                       <div class="gnb_sub_inner">
@@ -633,6 +640,12 @@
               <dd class="notice-rolling">
                 <ul>
                   <li>시스템 개선 및 점검 안내</li>
+                  <li>스타벅스 카드 유효기간 관련 안내</li>
+                  <li>시스템 개선 및 점검 안내</li>
+                  <li>
+                    사이렌 오더/딜리버스 음료 기본 설정 변경 안내 (HOT → ICED)
+                  </li>
+                  <li>시스템 개선 및 점검 안내</li>
                 </ul>
               </dd>
             </div>
@@ -664,6 +677,57 @@
       </div>
     </div>
     <!-- // NOTICE -->
+
+    <!-- PROMOTION -->
+    <div class="promotion">
+      <div class="promotion-container">
+        <ul class="bxslider">
+          <li class="active-slide">
+            <img
+              src="https://image.istarbucks.co.kr/upload/banner/wW63vb_20211231154557623.jpg"
+              alt=""
+            />
+            <a href="">자세히보기</a>
+          </li>
+          <li>
+            <img
+              src="https://image.istarbucks.co.kr/upload/banner/fs8Fa0_20220411134210197.jpg"
+              alt=""
+            />
+            <a href="">자세히보기</a>
+          </li>
+          <li>
+            <img
+              src="https://image.istarbucks.co.kr/upload/banner/Y7YBKr_20220404160419657.jpg"
+              alt=""
+            />
+            <a href="">자세히보기</a>
+          </li>
+          <li>
+            <img
+              src="https://image.istarbucks.co.kr/upload/banner/wW63vb_20211231154557623.jpg"
+              alt=""
+            />
+            <a href="">자세히보기</a>
+          </li>
+          <li>
+            <img
+              src="https://image.istarbucks.co.kr/upload/banner/fs8Fa0_20220411134210197.jpg"
+              alt=""
+            />
+            <a href="">자세히보기</a>
+          </li>
+        </ul>
+        <!-- btn -->
+        <p class="prev-btn">
+          <a href="">prev</a>
+        </p>
+        <p class="next-btn">
+          <a href="">next</a>
+        </p>
+      </div>
+    </div>
+    <!-- // PROMOTION -->
 
     <!-- REWARDS -->
     <div class="rewards">
@@ -706,7 +770,7 @@
     <!-- // REWARD -->
 
     <!-- BEAN -->
-    <div class="bean">
+    <div class="bean" id="scroll">
       <div class="bean-inner">
         <div class="img-area">
           <img
@@ -728,7 +792,7 @@
     <!-- // BEAN -->
 
     <!-- RESERVE -->
-    <div class="reserve">
+    <div class="reserve" id="scroll">
       <div class="reserve-inner">
         <div class="reserve-title">
           <img
@@ -752,7 +816,7 @@
     <!-- // RESERVE -->
 
     <!-- FAVORITE -->
-    <div class="favorite">
+    <div class="favorite" id="scroll">
       <div class="container">
         <div class="txt-area">
           <div class="txt1"></div>
@@ -767,7 +831,7 @@
     <!-- // FAVORITE -->
 
     <!-- MAGAZINE -->
-    <div class="magazine">
+    <div class="magazine" id="scroll">
       <div class="container">
         <div class="magazine-tit">
           <img
@@ -791,7 +855,7 @@
     <!-- // MAGAZINE -->
 
     <!-- STORE -->
-    <div class="store">
+    <div class="store" id="scroll">
       <div class="container">
         <div class="img1"></div>
         <div class="img2"></div>
@@ -807,7 +871,7 @@
     <!-- // STORE -->
 
     <!-- FOOTER -->
-    <div class="footer">
+    <div class="footer" id="scroll">
       <div class="menu-container">
         <!-- menu -->
         <div class="menu">
@@ -955,12 +1019,5 @@
 
     <!-- JS -->
     <script src="./assets/js/index.js"></script>
-
-    <!-- popup -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fslightbox/3.3.1/index.min.js"></script>
-    <script src="../js/notice.js"></script>
-    <script>
-      Notice.init('전우열', './test.pdf');
-    </script>
   </body>
 </html>
