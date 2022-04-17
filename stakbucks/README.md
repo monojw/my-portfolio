@@ -1,2 +1,0 @@
-# starbucks-clone
-Starbucks Clone
