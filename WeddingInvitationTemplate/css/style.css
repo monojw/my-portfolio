@@ -63,10 +63,7 @@ body {
 
 /* Header */
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   background-image: url(https://www.w3schools.com/w3images/wedding_couple.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -74,6 +71,13 @@ body {
   min-height: 100vh;
   text-align: center;
   color: #fff;
+}
+
+.header .header-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .header h1 {
@@ -124,6 +128,7 @@ body {
 .about-content img {
   margin: 32px 0;
   width: 100%;
+  border-radius: 4px;
 }
 
 .about-content p {
@@ -148,10 +153,7 @@ body {
 
 /* Invite */
 .invite {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  position: relative;
   background-image: url(https://www.w3schools.com/w3images/flowers.jpg);
   background-repeat: no-repeat;
   background-position: center;
@@ -160,6 +162,13 @@ body {
 
   text-align: center;
   color: #fff;
+}
+
+.invite .invite-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .invite h1 {
@@ -196,6 +205,12 @@ body {
 
 .detail-content img {
   margin: 64px 0;
+}
+
+.detail-content .detail-img img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
 }
 
 .detail-info {
@@ -274,4 +289,18 @@ body {
 .footer p a {
   color: #fff;
   text-decoration-line: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .detail-info {
+    flex-direction: column;
+  }
+
+  .detail-info div {
+    text-align: center;
+  }
 }
